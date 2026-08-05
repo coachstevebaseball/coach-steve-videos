@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Game Day — Coach Steve Baseball</title>
+  <meta name="description" content="Home runs, clutch RBIs, and 5-for-6 nights — Coach Steve's hitters taking cage training into live game at-bats." />
+  <meta property="og:title" content="Game Day — Coach Steve Baseball" />
+  <meta property="og:description" content="The same hitters, the same swings — under the lights, when it counts." />
+  <meta property="og:image" content="https://i.ytimg.com/vi/7B0P1wyjkyA/maxresdefault.jpg" />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="page-game" data-page="game" data-featured="7B0P1wyjkyA">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="Coach Steve Baseball home">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none" role="img" aria-label="Coach Steve Baseball logo">
+        <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="2" />
+        <path d="M8.2 6.2 C 13 11, 13 21, 8.2 25.8" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" />
+        <path d="M23.8 6.2 C 19 11, 19 21, 23.8 25.8" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" />
+        <path d="M11 10.6l2.3-1.1M12 13.5l2.5-.5M12 18.5l2.5.5M11 21.4l2.3 1.1" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M21 10.6l-2.3-1.1M20 13.5l-2.5-.5M20 18.5l-2.5.5M21 21.4l-2.3 1.1" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+      <span class="brand-name">Coach Steve Baseball</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="./cage.html">The Cage</a>
+      <a href="./gameday.html" aria-current="page">Game Day</a>
+      <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch color mode"></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" data-reveal>
+      <p class="hero-kicker">Live at-bats · Under the lights</p>
+      <h1>Game <span class="accent">Day</span></h1>
+      <p class="hero-lede">
+        Cage work is practice. This is proof. The same hitters you saw grinding through drills —
+        now turning on fastballs, winning 2-strike battles, and clearing fences when it counts.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>10</b><span>Game clips</span></div>
+        <div class="hero-stat"><b>2</b><span>Home runs</span></div>
+        <div class="hero-stat"><b>5-for-6</b><span>Best single game</span></div>
+      </div>
+    </section>
+
+    <section class="featured" aria-label="Featured game moment" data-reveal>
+      <button class="featured-card" id="featured-btn" type="button" aria-label="Play featured video: Gunnar hits a no-doubt home run">
+        <img src="https://i.ytimg.com/vi/7B0P1wyjkyA/maxresdefault.jpg" alt="" loading="eager" decoding="async" width="1280" height="720" />
+        <div class="featured-copy">
+          <div>
+            <p class="featured-label">Featured moment</p>
+            <p class="featured-title">Gunnar leaves no doubt</p>
+            <p class="featured-meta">A home run that was built in the cage</p>
+          </div>
+          <span class="play-badge" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5z" /></svg>
+          </span>
+        </div>
+      </button>
+    </section>
+
+    <div class="filter-bar" data-reveal>
+      <h2 class="filter-heading">Every clip <span style="color:var(--color-text-faint)">(<span id="visible-count">9</span>)</span></h2>
+    </div>
+
+    <section class="grid-wrap" aria-label="Game videos">
+      <div class="video-grid" id="video-grid"></div>
+      <div class="empty-state" id="empty-state">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5c2 2 3 3.5 3.5 5.5M14.5 9c-2 .8-3.8.8-5.5.5"/></svg>
+        <h3>No clips here yet</h3>
+        <p>Game footage gets added after every weekend — check back soon.</p>
+      </div>
+    </section>
+
+    <aside class="cross-band">
+      <a href="./cage.html">
+        <div>
+          <p class="cross-kicker">The process</p>
+          <p class="cross-title">See the work behind it in The Cage</p>
+        </div>
+        <span class="cross-arrow" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </span>
+      </a>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <span class="foot-brand">Coach Steve Baseball</span>
+    <span>Private hitting &amp; player development · East Meadow, NY</span>
+    <a href="https://www.youtube.com/@coachstevebaseball" target="_blank" rel="noopener noreferrer" style="color:inherit">YouTube ↗</a>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="lightbox-scrim"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-controls">
+        <button class="lb-btn" data-lb-close type="button" aria-label="Close video">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+      </div>
+      <div class="lightbox-frame"></div>
+      <div class="lightbox-body">
+        <p class="lightbox-meta"></p>
+        <h2 class="lightbox-title"></h2>
+        <p class="lightbox-desc"></p>
+      </div>
+      <div class="lightbox-nav">
+        <button class="lb-nav-btn" data-lb-prev type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+          Previous
+        </button>
+        <button class="lb-nav-btn" data-lb-next type="button">
+          Next
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./videos.js" defer></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>
