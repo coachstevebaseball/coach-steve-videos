@@ -234,19 +234,34 @@
     function show(idx) {
       currentIdx = idx;
       const v = currentList[idx];
-      lbFrame.innerHTML =
-        '<iframe src="https://www.youtube-nocookie.com/embed/' +
-        v.id +
-        '?autoplay=1&rel=0&modestbranding=1" title="' +
-        v.title.replace(/"/g, '&quot;') +
-        '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+      lbFrame.innerHTML = '';
+      const ifr = document.createElement('iframe');
+      ifr.src =
+        'https://www.youtube-nocookie.com/embed/' +
+        encodeURIComponent(v.id) +
+        '?autoplay=1&rel=0&modestbranding=1';
+      ifr.title = v.title;
+      ifr.setAttribute(
+        'allow',
+        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+      );
+      ifr.setAttribute('allowfullscreen', '');
+      lbFrame.appendChild(ifr);
       lbTitle.textContent = v.title;
       lbDesc.textContent = v.desc || '';
       lbDesc.style.display = v.desc ? '' : 'none';
+      lbMeta.innerHTML = '';
+      const metaSpan = document.createElement('span');
       let meta = fmtDate(v.date);
-      if (v.players && v.players.length) meta += ' &nbsp;·&nbsp; ' + v.players.join(', ');
-      lbMeta.innerHTML =
-        '<span>' + meta + '</span>' + (v.result ? '<span class="result">' + v.result + '</span>' : '');
+      if (v.players && v.players.length) meta += '  ·  ' + v.players.join(', ');
+      metaSpan.textContent = meta;
+      lbMeta.appendChild(metaSpan);
+      if (v.result) {
+        const resSpan = document.createElement('span');
+        resSpan.className = 'result';
+        resSpan.textContent = v.result;
+        lbMeta.appendChild(resSpan);
+      }
       btnPrev.disabled = idx <= 0;
       btnNext.disabled = idx >= currentList.length - 1;
     }
